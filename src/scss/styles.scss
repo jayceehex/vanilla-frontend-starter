@@ -1,0 +1,54 @@
+@import url(./normalize.css);
+
+:root {
+  --background-colour: white;
+  --primary: red;
+  --secondary: blue;
+  --highlight: yellow;
+  --dark: black;
+  --light: white;
+  --block-x-pad: 2em;
+  --block-y-pad: 2.5em;
+}
+
+body {
+  background-color: var(--background-colour);
+}
+
+.container {
+  padding: var(--block-y-pad) var(--block-x-pad);
+}
+
+.header {
+  height: 100vh;
+  /* padding-top: 15em;
+    padding-bottom: 15em; */
+  background-color: black;
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5));
+  .header__title {
+    color: white;
+    .header__title_highlight {
+      color: var(--highlight);
+    }
+  }
+}
+
+.footer {
+  padding: var(--block-y-pad) var(--block-x-pad);
+  background-color: antiquewhite;
+}
+
+.button {
+  border: none;
+  padding: 0.5rem 1rem;
+  background-color: var(--primary);
+  &:hover,
+  &:active {
+    background-color: var(--highlight);
+    cursor: pointer;
+  }
+}
+
+.button_large {
+  padding: 1rem 2rem;
+}
