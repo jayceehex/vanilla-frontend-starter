@@ -1,22 +1,14 @@
+@use '_variables' as *;
+@use '_mixins' as *;
 @import url(./normalize.css);
 
-:root {
-  --background-colour: white;
-  --primary: red;
-  --secondary: blue;
-  --highlight: yellow;
-  --dark: black;
-  --light: white;
-  --block-x-pad: 2em;
-  --block-y-pad: 2.5em;
-}
 
 body {
-  background-color: var(--background-colour);
+  background-color: $background-colour;
 }
 
 .container {
-  padding: var(--block-y-pad) var(--block-x-pad);
+  @include block-padding;
 }
 
 .header {
@@ -28,23 +20,23 @@ body {
   .header__title {
     color: white;
     .header__title_highlight {
-      color: var(--highlight);
+      color: $highlight;
     }
   }
 }
 
 .footer {
-  padding: var(--block-y-pad) var(--block-x-pad);
+  @include block-padding;
   background-color: antiquewhite;
 }
 
 .button {
   border: none;
   padding: 0.5rem 1rem;
-  background-color: var(--primary);
+  background-color: $primary;
   &:hover,
   &:active {
-    background-color: var(--highlight);
+    background-color: $highlight;
     cursor: pointer;
   }
 }
