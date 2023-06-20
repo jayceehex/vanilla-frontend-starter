@@ -1,9 +1,12 @@
-@use '_variables' as *;
-@use '_mixins' as *;
+@use "_variables" as *;
+@use "_mixins" as *;
 @import url(./normalize.css);
-
+@import url(./button.scss);
+@import url(./header.scss);
+@import url(./footer.scss);
 
 body {
+  font-family: 'Open Sans', sans-serif;
   background-color: $background-colour;
 }
 
@@ -11,36 +14,25 @@ body {
   @include block-padding;
 }
 
-.header {
+.splash {
   height: 100vh;
-  /* padding-top: 15em;
-    padding-bottom: 15em; */
-  background-color: black;
-  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5));
-  .header__title {
-    color: white;
-    .header__title_highlight {
-      color: $highlight;
-    }
+  background-color: $background-colour;
+  background: linear-gradient($header-gradient-from, $header-gradient-to);
+}
+
+.big-title {
+  font-size: 2.5em;
+  margin: 0.65em 0;
+  @include medium-and-up {
+    font-size: 3em;
+    margin: 0.7em 0;
   }
-}
-
-.footer {
-  @include block-padding;
-  background-color: antiquewhite;
-}
-
-.button {
-  border: none;
-  padding: 0.5rem 1rem;
-  background-color: $primary;
-  &:hover,
-  &:active {
-    background-color: $highlight;
-    cursor: pointer;
+  @include large-and-up {
+    font-size: 4em;
+    margin: 0.75em 0;
   }
-}
-
-.button_large {
-  padding: 1rem 2rem;
+  @include xl-and-up {
+    font-size: 5em;
+    margin: 0.8em 0;
+  }
 }

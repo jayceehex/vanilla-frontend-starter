@@ -1,8 +1,13 @@
-$background-colour: white;
 $primary: red;
 $secondary: blue;
 $highlight: yellow;
-$dark: black;
-$light: white;
-$block-x-pad: 2em;
-$block-y-pad: 2.5em;
+$dark: #000000;
+$semi-dark: #757575;
+$semi-light: #eeeeee;
+$light: #ffffff;
+$background-colour: $light;
+$header-bg-colour: $dark;
+$header-gradient-from: rgba(0, 0, 0, 0.1);
+$header-gradient-to: rgba(0, 0, 0, 0.5);
+$block-x-pad: 1em;
+$block-y-pad: 1.5em;

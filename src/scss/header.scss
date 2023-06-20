@@ -1,0 +1,15 @@
+@use "variables" as *;
+
+.header {
+  height: 100vh;
+  /* padding-top: 15em;
+    padding-bottom: 15em; */
+  background-color: $header-bg-colour;
+  background: linear-gradient($header-gradient-from, $header-gradient-to);
+  .header__title {
+    color: $light;
+    .header__title_highlight {
+      color: $highlight;
+    }
+  }
+}

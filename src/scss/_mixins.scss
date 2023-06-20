@@ -1,12 +1,55 @@
-@use 'variables' as *;
+@use "variables" as *;
+
+// Media breakpoints
+
+@mixin medium-and-up {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin large-and-up {
+  @media (min-width: 992px) {
+    @content;
+  }
+}
+
+@mixin xl-and-up {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin xxl-and-up {
+  @media (min-width: 1680px) {
+    @content;
+  }
+}
+
+// Styling
 
 @mixin block-padding {
   padding: $block-y-pad $block-x-pad;
+  @include medium-and-up {
+    padding: 3em;
+  }
+  @include large-and-up {
+    padding: 4em 5em;
+  }
+  @include xl-and-up {
+    padding: 5em;
+  }
 }
 
 @mixin patterned-background {
-    background-color: $light;
-    opacity: 0.75;
-    background-size: 15px 15px;
-    background-image: repeating-linear-gradient(45deg, $primary 0, $primary 1.5px, $light 0, $light 50%);
-  }
+  background-color: $light;
+  opacity: 0.75;
+  background-size: 15px 15px;
+  background-image: repeating-linear-gradient(
+    45deg,
+    $primary 0,
+    $primary 1.5px,
+    $light 0,
+    $light 50%
+  );
+} ;

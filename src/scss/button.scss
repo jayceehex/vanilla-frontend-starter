@@ -1,0 +1,23 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+.button {
+  border: none;
+  padding: 0.5rem 1rem;
+  @include large-and-up {
+    padding: 1rem 2rem;
+  }
+  background-color: $primary;
+  &:hover,
+  &:active {
+    background-color: $highlight;
+    cursor: pointer;
+  }
+}
+
+.button_large {
+  padding: 1rem 2rem;
+  @include large-and-up {
+    padding: 2rem 4rem;
+  }
+}

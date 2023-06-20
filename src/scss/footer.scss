@@ -1,0 +1,6 @@
+@use "mixins" as *;
+
+.footer {
+  @include block-padding;
+  background-color: antiquewhite;
+}
