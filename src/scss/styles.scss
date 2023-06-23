@@ -1,6 +1,7 @@
 @use "_variables" as *;
 @use "_mixins" as *;
 @import url(./normalize.css);
+@import url(./layout.scss);
 @import url(./button.scss);
 @import url(./header.scss);
 @import url(./footer.scss);
@@ -8,10 +9,6 @@
 body {
   font-family: "Open Sans", sans-serif;
   background-color: $background-colour;
-}
-
-.container {
-  @include block-padding;
 }
 
 .splash {
@@ -35,4 +32,8 @@ body {
     font-size: 5em;
     margin: 0.8em 0;
   }
+}
+
+.patterned {
+  @include patterned-background;
 }

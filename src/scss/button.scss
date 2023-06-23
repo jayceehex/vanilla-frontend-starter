@@ -3,14 +3,16 @@
 
 .button {
   border: none;
+  margin: 0;
   padding: 0.5rem 1rem;
   @include large-and-up {
     padding: 1rem 2rem;
   }
-  background-color: $primary;
+  background-color: $highlight;
+  color: $dark;
   &:hover,
   &:active {
-    background-color: $highlight;
+    background-color: $light;
     cursor: pointer;
   }
 }
@@ -19,5 +21,25 @@
   padding: 1rem 2rem;
   @include large-and-up {
     padding: 2rem 4rem;
+  }
+}
+
+.button_dark {
+  background-color: $dark;
+  color: $light;
+  &:hover,
+  &:active {
+    background-color: $light;
+    color: $dark;
+  }
+}
+
+.button_light {
+  background-color: $light;
+  color: $dark;
+  &:hover,
+  &:active {
+    background-color: $dark;
+    color: $light;
   }
 }

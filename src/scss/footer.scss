@@ -1,6 +1,24 @@
+@use "variables" as *;
 @use "mixins" as *;
 
 .footer {
   @include block-padding;
-  background-color: antiquewhite;
+  background-color: $semi-light;
+  margin-top: auto;
+  .footer-row {
+    display: flex;
+    flex-direction: column;
+    @include medium-and-up {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      text-align: center;
+      :first-child {
+        text-align: left;
+      }
+      :last-child {
+        text-align: right;
+      }
+    }
+  }
 }
