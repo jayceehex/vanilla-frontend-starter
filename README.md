@@ -2,7 +2,7 @@
 
 ---
 
-This is my personal starter for developing quick little front-end projects using HTML and CSS with minimal JS.
+This is my personal starter for quick and dirty HTML-and-CSS projects with minimal JS, such as splash screens or portfolio work. It incorporates my personal stylesheet, written in SCSS, ready for minimal tweaking and personalisation.
 
 ## Styles
 
